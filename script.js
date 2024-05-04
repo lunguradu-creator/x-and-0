@@ -11,9 +11,9 @@ function playMove(row, col) {
         board[row][col] = currentPlayer;
         document.getElementById(`cell-${row}-${col}`).innerText = currentPlayer;
         if (checkWin()) {
-            document.getElementById('message').innerText = `${currentPlayer} a câștigat!`;
+            document.getElementById('message').innerText = `${currentPlayer} wins!`;
         } else if (checkDraw()) {
-            document.getElementById('message').innerText = 'Remiză!';
+            document.getElementById('message').innerText = 'No winner!';
         } else {
             currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
         }
